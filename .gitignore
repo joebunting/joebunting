@@ -12,3 +12,4 @@ public/uploads
 /node_modules
 public/temp/*
 npm-debug.log
+/app/config/app.php
