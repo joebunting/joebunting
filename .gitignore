@@ -1,0 +1,14 @@
+/bootstrap/compiled.php
+bootstrap/paths.php
+/vendor
+composer.phar
+composer.lock
+.env.local.php
+public/temp/*
+.env.php
+.DS_Store
+Thumbs.db
+public/uploads
+/node_modules
+public/temp/*
+npm-debug.log
