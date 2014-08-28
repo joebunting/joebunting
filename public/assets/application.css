@@ -13,12 +13,12 @@ img {
 }
 
 .welcome {
-	width: 300px;
+	width: 500px;
 	height: 200px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-left: -150px;
+	margin-left: -250px;
 	margin-top: -100px;
 }
 
@@ -37,6 +37,6 @@ a, a:visited {
 }
 
 h1 {
-	font-size: 28px;
+	font-size: 24px;
 	margin: 16px 0 0 0;
 }

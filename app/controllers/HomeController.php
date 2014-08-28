@@ -18,7 +18,7 @@ class HomeController extends BaseController {
 	public function showHome()
 	{
 		
-		$chooser = rand(1,2);
+		$chooser = rand(1,3);
 		$theLocation = 'Santa Barbara';
 		if ($chooser == 1) {
 			$html = new DOMDocument();
@@ -35,7 +35,7 @@ class HomeController extends BaseController {
 			} elseif ($temp > 41 & $temp < 59) {
 				$msg = 'It\'s a bit chilly. Might want to bring a sweater.';
 			}
-		} else {
+		} elseif ($chooser == 2) {
 			$html = new DOMDocument();	@$html->loadHtmlFile('https://www.goodreads.com/quotes/list/6055692');
 			$xpath = new DOMXPath( $html );
 			$nodelist = $xpath->query( "//div[@class='quoteText']" );
@@ -45,7 +45,14 @@ class HomeController extends BaseController {
 			foreach ($nodelist as $n){
 			$msg = $n->nodeValue."\n";
 			}
+		} elseif ($chooser == 3) {
+			$chooseTwo = rand(1,2);
+			if($chooseTwo == 1) {
+				$msg = 'Publisher of <a href="http://thewritepractice.com">The Write Practice</a>';
+			} else {
+				$msg = 'Creator of <a href="http://storycartel.com">Story Cartel</a>';
 			}
+		}
 		
 		return View::make('distributor')->with('msg',$msg);
 	}
