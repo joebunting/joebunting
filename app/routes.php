@@ -12,3 +12,7 @@
 */
 
 Route::get('/', ['uses' => 'HomeController@showWelcome', 'as' => 'welcome']);
+Route::get('/quotes', ['uses' => 'QuotesController@quotes', 'as' => 'quotes']);
+Route::get('/quotes/test', function(){
+	return View::make('test');
+});
