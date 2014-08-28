@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', ['uses' => 'HomeController@showWelcome', 'as' => 'welcome']);
+Route::get('/', ['uses' => 'HomeController@showHome', 'as' => 'welcome']);
 Route::get('/quotes', ['uses' => 'QuotesController@quotes', 'as' => 'quotes']);
-Route::get('/quotes/test', function(){
-	return View::make('test');
+Route::get('/tests/quotes', function(){
+	return View::make('tests.quotes');
 });
+Route::get('/tests/merge', ['uses' => 'TestsController@merge', 'as' => 'merge']);

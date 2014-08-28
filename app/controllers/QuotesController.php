@@ -12,7 +12,7 @@ class QuotesController extends BaseController {
 		$nodelist = $xpath->query( "//li[".$rand."]/div[@class='quoteText']" );
 		foreach ($nodelist as $n){
 		$theQuote = $n->nodeValue."\n";
-	}
+		}
 
 		return View::make('quotes', array('theQuote' => $theQuote))
 		->withTitle('Joe Bunting\'s favorite quote is...');

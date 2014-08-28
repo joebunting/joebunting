@@ -1,10 +1,12 @@
 @extends('application')
 
 @section('content')
-	<div class="quotes">
+	<div class="welcome">
 		<a href="http://joebunting.com"><img src="https://s3.amazonaws.com/jhbfiles/Joe+Bunting-headshot.jpg"></a>
-		<h1>{{$theQuote}}</h1>
+		<h1>{{ $msg }}</h1>
 	</div>
-			
+
+	
+	
 	
 @stop
